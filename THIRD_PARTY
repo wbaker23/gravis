@@ -10,3 +10,19 @@ Here is a short list of reused libraries and their licenses:
 - require.min.js: MIT License (with additional paragraphs that apply to other parts of the repository)
 - three.min.js: MIT License
 - vis-network.min.js: MIT License
+
+Bundled versions (including dependencies embedded in the browser distributions):
+- RequireJS 2.3.8 (also used by the documentation)
+- D3 7.9.0
+- 3d-force-graph 1.73.3
+- Three.js 0.149.0
+- vis-network 9.1.13 (standalone UMD distribution)
+
+Source package URLs are recorded in each JavaScript file. The visualization
+libraries retain their upstream UMD code inside an adapter that names anonymous
+AMD definitions for gravis. Unicode NEL characters are escaped for nbsphinx.
+
+Security updates:
+- RequireJS: GHSA-x3m3-4wpv-5vgc (prototype pollution).
+- D3: GHSA-36jr-mh4h-2g58 (d3-color ReDoS).
+- vis-network: GHSA-w5hq-g745-h8pq (embedded uuid bounds checking).
