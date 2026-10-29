@@ -2,13 +2,13 @@
 
 import json as _json
 
-import pkg_resources as _pkg_resources
+import pkgutil as _pkgutil
 
 
 def load(resource_path):
     """Load a file in the same directory as the template system module."""
-    resource_package = __name__
-    binary_data = _pkg_resources.resource_string(resource_package, resource_path)
+    resource_package = __package__
+    binary_data = _pkgutil.get_data(resource_package, resource_path)
     string = binary_data.decode('utf-8')
     return string
 
