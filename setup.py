@@ -124,9 +124,7 @@ setup(
     python_requires='>=3.5',
 
     # Dependencies that are downloaded by pip on installation and why
-    install_requires=[
-        'setuptools>=40.0',  # access to package files
-    ],
+    install_requires=[],
 
     # Capability of running in compressed form: no
     zip_safe=False,
